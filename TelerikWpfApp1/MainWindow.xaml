@@ -3,7 +3,8 @@
                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                 xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
                 Title="MainWindow" Height="350" Width="525">
-        <Grid>
-                
-        </Grid>
+    <StackPanel>
+        <telerik:Label Content="Hello World" x:Name="StatusLabel" />
+        <telerik:RadButton Content="Open" x:Name="OpenDirectoryButton" Click="OpenDirectoryButton_Click" />
+    </StackPanel>
 </Window>
