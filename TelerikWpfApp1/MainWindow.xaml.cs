@@ -26,8 +26,8 @@ namespace TelerikWpfApp1
 
         private async void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            OpenDirectoryButton.IsEnabled = false;
             BusyIndicator.IsBusy = true;
+            OpenDirectoryButton.IsEnabled = false;
 
             await Task.Run(() =>
             {
@@ -52,8 +52,8 @@ namespace TelerikWpfApp1
 
             });
 
-            StatusLabel.Content = $"Excel document processing completed normally on {DateTime.Now}";
             BusyIndicator.IsBusy = false;
+            StatusLabel.Content = $"Excel document processing completed normally on {DateTime.Now}";
             OpenDirectoryButton.IsEnabled = true;
         }
     }

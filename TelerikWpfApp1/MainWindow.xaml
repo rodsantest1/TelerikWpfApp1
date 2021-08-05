@@ -6,7 +6,8 @@
     <StackPanel>
         <telerik:Label Content="Hello World" x:Name="StatusLabel" />
         <telerik:RadButton Content="Open" x:Name="OpenDirectoryButton" Click="OpenDirectoryButton_Click" />
-        <telerik:RadBusyIndicator x:Name="BusyIndicator" Height="300" BusyContent="Processing" Width="300"/>
-
+        <Viewbox Stretch="Uniform" Height="100" Width="100">
+            <telerik:RadBusyIndicator Background="Transparent" x:Name="BusyIndicator" BusyContent="" BorderBrush="Transparent"/>
+        </Viewbox>
     </StackPanel>
 </Window>
