@@ -2,9 +2,11 @@
                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                 xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
-                Title="MainWindow" Height="350" Width="525">
+                Title="MainWindow" Height="350" Width="525" Loaded="Window_Loaded">
     <StackPanel>
         <telerik:Label Content="Hello World" x:Name="StatusLabel" />
         <telerik:RadButton Content="Open" x:Name="OpenDirectoryButton" Click="OpenDirectoryButton_Click" />
+        <telerik:RadBusyIndicator x:Name="BusyIndicator" Height="300" BusyContent="Processing" Width="300"/>
+
     </StackPanel>
 </Window>
