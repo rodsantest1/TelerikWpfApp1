@@ -37,6 +37,7 @@ namespace TelerikWpfApp1
                 worksheet.Columns[3].SetWidth(new ColumnWidth(300, true));
                 worksheet.Columns[5].SetWidth(new ColumnWidth(150, true));
                 worksheet.Columns[6].SetWidth(new ColumnWidth(150, true));
+                worksheet.Columns[7].SetWidth(new ColumnWidth(150, true));
 
                 /* Step 2 - Set value of cell */
                 CellSelection selection = worksheet.Cells[1, 1]; //B2 cell 
@@ -64,6 +65,26 @@ namespace TelerikWpfApp1
                 CellSelection selection6 = worksheet.Cells[1, 6]; //G2 cell 
                 var test3 = DateTime.Now.ToLongTimeString();
                 selection6.SetValue(test3);
+
+                CellSelection selection7 = worksheet.Cells[1, 7]; //H2 cell 
+                var test4 = "2021-08-06T16:13:39.8725051-04:00";
+                selection7.SetValue(test4);
+
+                CellSelection selection8 = worksheet.Cells[1, 8]; //I2 cell 
+                //selection8.SetFormat(new CellValueFormat("\"0\"#"));
+                string test5 = "1";
+                selection8.SetValue(test5);
+
+                CellSelection selection9 = worksheet.Cells[1, 9]; //J2 cell 
+                int test6 = 1;
+                selection9.SetValueAsText($"{test6}");
+
+                CellSelection selection10 = worksheet.Cells[1, 10]; //K2 cell 
+                //selection10.SetFormat(new CellValueFormat("DateTime"));
+                string test7 = "-0:01:57";
+                selection10.SetValueAsText($"{test7}");
+
+
 
                 /* Step 3 - Export to xlsx */
                 string fileName = "SampleFile.xlsx";
