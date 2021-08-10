@@ -84,7 +84,32 @@ namespace TelerikWpfApp1
                 string test7 = "-0:01:57";
                 selection10.SetValueAsText($"{test7}");
 
+                CellSelection selection11 = worksheet.Cells[1, 11]; //L2 cell 
+                decimal test8 = -0.57M;
+                selection11.SetValue($"{test8}");
+                //Todo: note order between these matters
+                selection11.SetFormat(new CellValueFormat("General"));
 
+                CellSelection selection12 = worksheet.Cells[1, 12]; //M2 cell 
+                TimeSpan test9 = new TimeSpan(8,08,08);
+                selection12.SetValueAsText($"{test9}");
+
+                CellSelection selection13 = worksheet.Cells[1, 13]; //N2 cell 
+                string test10 = "8:08:08";
+                TimeSpan.TryParse(test10, out TimeSpan test10Out);
+                selection13.SetValueAsText($"{test10Out}");
+
+                CellSelection selection14 = worksheet.Cells[1, 14]; //O2 cell 
+                selection14.SetValue(1.3);
+                selection14.SetFormat(new CellValueFormat("#.00"));
+
+                CellSelection selection15 = worksheet.Cells[1, 15]; //P2 cell 
+                selection15.SetValue(0.3);
+                selection15.SetFormat(new CellValueFormat("#0.00"));
+
+                CellSelection selection16 = worksheet.Cells[1, 16]; //Q2 cell 
+                selection16.SetValue(100.3);
+                selection16.SetFormat(new CellValueFormat("#0.00"));
 
                 /* Step 3 - Export to xlsx */
                 string fileName = "SampleFile.xlsx";
