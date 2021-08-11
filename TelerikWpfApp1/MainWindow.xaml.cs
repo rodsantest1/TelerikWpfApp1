@@ -54,8 +54,8 @@ namespace TelerikWpfApp1
                 selection3.SetValue("Center this text");
 
                 CellSelection selection4 = worksheet.Cells[1, 4]; //E2 cell 
-                selection4.SetFormat(new CellValueFormat("\"0\"#"));
-                int test = 1;
+                selection4.SetFormat(new CellValueFormat("0#"));
+                int test = 10;
                 selection4.SetValueAsText(test.ToString());
 
                 CellSelection selection5 = worksheet.Cells[1, 5]; //F2 cell 
@@ -81,11 +81,11 @@ namespace TelerikWpfApp1
 
                 CellSelection selection10 = worksheet.Cells[1, 10]; //K2 cell 
                 //selection10.SetFormat(new CellValueFormat("DateTime"));
-                string test7 = "-0:01:57";
+                string test7 = "-0:01:50";
                 selection10.SetValueAsText($"{test7}");
 
                 CellSelection selection11 = worksheet.Cells[1, 11]; //L2 cell 
-                decimal test8 = -0.57M;
+                decimal test8 = -0.50M;
                 selection11.SetValue($"{test8}");
                 //Todo: note order between these matters
                 selection11.SetFormat(new CellValueFormat("General"));
@@ -104,7 +104,7 @@ namespace TelerikWpfApp1
                 selection14.SetFormat(new CellValueFormat("#.00"));
 
                 CellSelection selection15 = worksheet.Cells[1, 15]; //P2 cell 
-                selection15.SetValue(0.3);
+                selection15.SetValue(-0.3);
                 selection15.SetFormat(new CellValueFormat("#0.00"));
 
                 CellSelection selection16 = worksheet.Cells[1, 16]; //Q2 cell 
