@@ -91,11 +91,11 @@ namespace TelerikWpfApp1
                 selection11.SetFormat(new CellValueFormat("General"));
 
                 CellSelection selection12 = worksheet.Cells[1, 12]; //M2 cell 
-                TimeSpan test9 = new TimeSpan(8,08,08);
-                selection12.SetValueAsText($"{test9}");
+                TimeSpan test9 = new TimeSpan(-8,08,08);
+                selection12.SetValueAsText($"{test9}zzz");
 
                 CellSelection selection13 = worksheet.Cells[1, 13]; //N2 cell 
-                string test10 = "8:08:08";
+                string test10 = "-8:08:08";
                 TimeSpan.TryParse(test10, out TimeSpan test10Out);
                 selection13.SetValueAsText($"{test10Out}");
 
