@@ -3,9 +3,13 @@
                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                 xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
                 Title="MainWindow" Height="350" Width="525" Loaded="Window_Loaded">
-    <StackPanel>
+    <StackPanel Margin="5 0 5 0">
+        <StackPanel Orientation="Horizontal" Margin="0 15 0 0">
+            <Button x:Name="ExcelExportButton" Content="Excel" Click="ExcelExportButton_Click"  Width="50" />
+            <Button x:Name="PdfExportButton" Content="PDF" Click="PdfExportButton_Click" Width="50" Margin="15 0 0 0" />
+        </StackPanel>
+        <telerik:RadButton Content="Open in File Explorer" Width="200" x:Name="OpenDirectoryButton" Click="OpenDirectoryButton_Click" />
         <telerik:Label Content="Hello World" x:Name="StatusLabel" />
-        <telerik:RadButton Content="Open" x:Name="OpenDirectoryButton" Click="OpenDirectoryButton_Click" />
         <Viewbox Stretch="Uniform" Height="100" Width="100">
             <telerik:RadBusyIndicator Background="Transparent" x:Name="BusyIndicator" BusyContent="" BorderBrush="Transparent"/>
         </Viewbox>
